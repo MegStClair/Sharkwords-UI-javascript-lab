@@ -21,7 +21,7 @@ const numWrong = 0;
 // The divs should be appended to the section with id="word-container".
 const createDivsForChars = (word) => {
   const container = document.querySelector('#word-container')
-  for (const char in word){
+  for (const char of word){
     container.insertAdjacentHTML('beforeend', `<div class="letter-box ${char}"></div>`)
   }
 };
@@ -49,7 +49,10 @@ const disableLetterButton = (buttonEl) => {
 // For now, you should test it out to make sure it works
 
 const isLetterInWord = (letter) => {
-  // Replace this with your code
+  const LetterDiv = document.querySelector(`.${letter}`);
+  if (LetterDiv !== null) {
+    return true;
+  };
 };
 
 // This is like if __name__ == '__main__' in Python
