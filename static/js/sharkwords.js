@@ -61,7 +61,9 @@ const isLetterInWord = (letter) => {
 // Called when `letter` is in word. Update contents of divs with `letter`.
 //
 const handleCorrectGuess = (letter) => {
-  // Replace this with your code
+  if (document.querySelector('#letter-box').LetterDiv.contains(letter)){
+    document.querySelector('#letter-box').LetterDiv.add(letter)
+  }
 };
 
 //
@@ -99,4 +101,5 @@ const resetGame = () => {
 
   // in the next lab, you will be adding functionality to handle when
   // someone clicks on a letter
+  handleCorrectGuess();
 })();
